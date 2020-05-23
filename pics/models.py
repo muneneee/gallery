@@ -6,10 +6,14 @@ class Photo(models.Model):
     description = models.TextField()
     category = models.ForeignKey('Category', on_delete=models.CASCADE)
     location = models.ForeignKey('Location', on_delete=models.CASCADE) 
+    posted = models.DateTimeField(auto_now_add=True)
 
 
     def __str__(self):
         return self.name
+
+    def save_photo(self):
+        self.save()
 
 
 class Location(models.Model):
