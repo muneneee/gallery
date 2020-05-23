@@ -12,12 +12,13 @@
 
         {% block styles %}
             {% bootstrap_css %}
+            <link rel="stylesheet" href="{% static 'css/basepics.css'%}">
         {% endblock %}
     </head>
     <body>
         {% include "navbar.html" %}
         {% block content %}
-            <h1 class="text-center"> MyGallery is actually the way to my heart</h1>
+            <h1 class="text-center"> My Gallery is actually the way to my heart</h1>
         {% endblock %}
 
         {% block scripts %}
