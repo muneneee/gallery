@@ -17,8 +17,8 @@ class Photo(models.Model):
 
 
     @classmethod
-    def location_pics(cls,category):
-        pics = cls.objects.filter(category=category)
+    def location_pics(cls,location):
+        pics = cls.objects.filter(location = location)
         return pics
 
 
