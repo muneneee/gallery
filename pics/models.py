@@ -5,7 +5,7 @@ class Photo(models.Model):
     name = models.CharField(max_length=30)
     description = models.TextField()
     category = models.ForeignKey('Category', on_delete=models.CASCADE)
-    location = models.ForeignKey('Location' on_delete=models.CASCADE) 
+    location = models.ForeignKey('Location', on_delete=models.CASCADE) 
 
 
     def __str__(self):
