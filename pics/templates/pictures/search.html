@@ -1,0 +1,16 @@
+{% extends 'pictures/base.html'%}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            {% if categories.category %}
+                {% for categor in catgories %}
+                    <div class = "col-sm-6 col-md-3">
+                        <h1>{{categor.name}}</h1>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <h2>No category like that found</h2>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,5 +1,21 @@
 from django.db import models
 
+
+
+class Location(models.Model):
+    location_name=models.CharField(max_length=20)
+
+    def __str__(self):
+        return self.location_name
+
+
+class Category(models.Model):
+    category_name = models.CharField(max_length=20)
+
+    def __str__(self):
+        return self.category_name
+
+
 class Photo(models.Model):
     image= models.ImageField(upload_to='photos/')
     name = models.CharField(max_length=30)
@@ -22,15 +38,9 @@ class Photo(models.Model):
         return pics
 
 
-class Location(models.Model):
-    location_name=models.CharField(max_length=20)
+    @classmethod
+    def search_by_category(cls,search_term):
+        pics = cls.objects.filter(category__category_name__icontains=search_term)
+        return pics
 
-    def __str__(self):
-        return self.location_name
 
-
-class Category(models.Model):
-    category_name = models.CharField(max_length=20)
-
-    def __str__(self):
-        return self.category_name
