@@ -16,6 +16,12 @@ class Photo(models.Model):
         self.save()
 
 
+    @classmethod
+    def location_pics(cls,category):
+        pics = cls.objects.filter(category=category)
+        return pics
+
+
 class Location(models.Model):
     location_name=models.CharField(max_length=20)
 
