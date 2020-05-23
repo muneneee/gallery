@@ -1,3 +1,8 @@
 from django.db import models
 
-# Create your models here.
+class Photo(models.Model):
+    image= models.ImageField(upload_to='photos/')
+    name = models.TextField()
+    description = models.TextField()
+    category = models.ForeignKey('Category', on_delete=models.CASCADE)
+    location = models.ForeignKey('Location' on_delete=models.CASCADE) 
