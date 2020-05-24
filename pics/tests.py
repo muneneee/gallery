@@ -28,3 +28,15 @@ class PhotoTestClass(TestCase):
         self.image.delete_photo()
         photos = Photo.objects.all()
         self.assertTrue(len(photos) < 1)
+
+    
+
+    def test_search_by_category(self):
+        images = Photo.search_by_category('fashion')
+        self.assertTrue(len(images)>0)
+
+
+
+    def test_filter_by_location(self):
+        images = Photo.filter_by_location('1')
+        self.assertTrue(len(images)>0)

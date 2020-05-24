@@ -43,9 +43,10 @@ class Photo(models.Model):
     def delete_photo(self):
         self.delete()
 
-    def update_photo(self):
-        self.update()
-
+    @classmethod
+    def update_image(cls, id ,name, description , location, category):
+        update = cls.objects.filter(id = id).update(name = name, description = description ,location = location,category = category)
+        # return update
 
     @classmethod
     def filter_by_location(cls,location):
