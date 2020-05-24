@@ -40,6 +40,13 @@ class Photo(models.Model):
         self.save()
 
 
+    def delete_photo(self):
+        self.delete()
+
+    def update_photo(self):
+        self.update()
+
+
     @classmethod
     def filter_by_location(cls,location):
         pics_location = cls.objects.filter(location__id=location)
