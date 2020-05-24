@@ -22,3 +22,9 @@ class PhotoTestClass(TestCase):
         self.image.save_photo()
         photos = Photo.objects.all()
         self.assertTrue(len(photos)>0)
+
+
+    def test_delete_photo(self):
+        self.image.delete_photo()
+        photos = Photo.objects.all()
+        self.assertTrue(len(photos) < 1)
