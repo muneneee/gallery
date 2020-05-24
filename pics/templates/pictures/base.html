@@ -18,7 +18,12 @@
     <body>
         {% include "navbar.html" %}
         {% block content %}
-            <h1 class="text-center"> My Gallery is actually the way to my heart</h1>
+            <div class="jumbotron">
+                <div class="container">
+                  <h1 class="text-center"><strong>My Gallery</strong></h1>
+                  <p class="text-center">My Gallery is actually the way to my heart</p>
+                </div>
+            </div>
         {% endblock %}
 
         {% block scripts %}

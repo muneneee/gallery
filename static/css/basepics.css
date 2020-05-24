@@ -1,3 +1,24 @@
 h1{
     color: #D6D1CF;
+    font-size: xx-large;
+}
+
+p{
+    font-size: x-large;
+}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color: rgb(199, 183, 198);
+    
+}
+
+.jumbotron{
+    background-image: url('../images/jumbotron.jpg');
+    background-size: cover;
+    height: 100%;
+}
+
+.imgs {
+    display: inline;
 }

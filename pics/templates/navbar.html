@@ -6,7 +6,7 @@
 
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(223, 106, 143, 0.836) ;">
             <a class="navbar-brand" href="{% url 'home' %}">My Gallery</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -38,7 +38,7 @@
                 
               </ul>
               <form class="form-inline my-2 my-lg-0" role="search" action="{% url 'search_results' %}">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="category">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search for category" aria-label="Search" name="category">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
               </form>
             </div>
