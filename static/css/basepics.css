@@ -22,3 +22,28 @@ html, body {
 .imgs {
     display: inline;
 }
+
+
+div.modal-dialog{
+    min-width: 1000px;
+    min-height: 500px;
+}
+
+div.modal-content{
+    min-width: 800px;
+    min-height: 500px;
+}
+
+@media screen and (max-width: 455px){
+
+    div.modal-dialog{
+        max-width: 300px;
+        min-width: 280px;
+    }
+    div.modal-content{
+        max-width: 300px;
+        min-width: 280px;
+        font-size: 0.8em;
+    }
+
+}

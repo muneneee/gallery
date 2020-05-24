@@ -4,13 +4,70 @@
         <div class="row">
             {% if categories %}
                 {% for category in categories %}
-                    <div class = "col-sm-6 col-md-3">
-                        <h1>{{category.name}}</h1>
+                    {% if category.image %}
+                    <hr>
+                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 padding-0 hover ">
+                        <a class="img-overlay" data-toggle="modal" data-target="#{{category.name}}">
+                            <img src="{{category.image.url}}" class="img-thumbnail" alt="image" style="cursor:pointer">
+                        </a>
                     </div>
+                    <hr>
+                    {% endif %}
+                {% endfor %}    
+                    
+                {% for category in categories %}
+                    <div class="modal fade" id="{{category.name}}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="deleteModalLabel">{{category.name}}</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-md-9 col-lg-9">
+                                            <img id="img{{image.id}}" src="{{category.image.url}}" class="img-thumbnail" alt="Image"  >
+            
+                                        </div>
+                                        <div class="col-md-3">
+                                            
+                                            <p>Location: {{category.location.location_name}}</p>
+                                            <hr>
+                                            
+                                            <p>Category: {{category.category.category_name}}</p>
+                                        </div>
+                                        <div>
+                                            <h4 class="desc">Name: {{category.name}}</h2>
+                                            <hr>
+                                            <h5>Description</h5>
+                                            <p class="desc">{{category.description}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 
                 {% endfor %}
+            
+
+
+
+
+
+
+
+                
             {% else %}
                 <h2>No category like that found</h2>
             {% endif %}
         </div>
     </div>
 {% endblock %}
+
+
