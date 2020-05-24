@@ -5,9 +5,13 @@
 
     <div class="container">
         {% for pic in pics %}
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                <h2>{{pic.name}}</h2>
-            </div>
+            
+        {% if pic.image %}
+                <div class="col-xs-6 col-md-6 col-lg-6">
+                    <img src="{{pic.image.url}}" class="img-responsive" alt="image">
+                </div>
+                <hr>
+        {% endif %}
          {% endfor %}   
     </div>
 
