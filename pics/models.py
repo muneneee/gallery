@@ -5,8 +5,17 @@ from django.db import models
 class Location(models.Model):
     location_name=models.CharField(max_length=20)
 
+
+    @classmethod
+    def get_location_id(cls, id):
+        place = Location.objects.get(pk = id)
+        return place
+
+
     def __str__(self):
         return self.location_name
+
+   
 
 
 class Category(models.Model):
@@ -25,17 +34,16 @@ class Photo(models.Model):
     posted = models.DateTimeField(auto_now_add=True)
 
 
-    def __str__(self):
-        return self.name
+    
 
     def save_photo(self):
         self.save()
 
 
     @classmethod
-    def location_pics(cls,location):
-        pics = cls.objects.filter(location = location)
-        return pics
+    def filter_by_location(cls,location):
+        pics_location = cls.objects.filter(location__id=location)
+        return pics_location
 
 
     @classmethod
@@ -43,4 +51,7 @@ class Photo(models.Model):
         pics = cls.objects.filter(category__category_name__icontains=search_term)
         return pics
 
+
+    def __str__(self):
+        return self.name
 
