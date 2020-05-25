@@ -10,19 +10,19 @@ Fork or clone the repository to get your own gallery
 ### Prerequisites
 
 you will need to install the dependencies in the requiremets.txt file for the app to work
- *Django Framework
- *Python3.6
- *Postgres
- *Python virtualenv
+ * Django Framework
+ * Python3.6
+ * Postgres
+ * Python virtualenv
 
 ### Installing
 
-*Activate virtual environment using python3.6 as default handler virtualenv -p /usr/bin/python3.6 venv && source venv/bin/activate
+* Activate virtual environment using python3.6 as default handler virtualenv -p /usr/bin/python3.6 venv && source venv/bin/activate
 
 
-*Install dependancies that will create an environment for the app to run pip3 install -r requirements.txt
+* Install dependancies that will create an environment for the app to run pip3 install -r requirements.txt
 
-*Create the Database
+* Create the Database
 - psql
 - CREATE DATABASE gallery;
 
