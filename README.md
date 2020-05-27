@@ -4,6 +4,8 @@ My Gallery is an web app I created using django to diplay my favorite images and
 
 ## Getting Started
 view live site [here](https://munene-gallery.herokuapp.com/)
+to upload photos, you can do it[here](https://munene-gallery.herokuapp.com/admin)
+the admin username is munene and password is 1234kevin
 
 Fork or clone the repository to get your own gallery
 
